@@ -1,9 +1,9 @@
 CROSS = 
-CFLAGS = -g  -I../inc/
+CFLAGS = -g 
 LDFLAGS = 
 OBJ = $(patsubst %.c,%.o,$(wildcard *.c))
-BINDIR = ../bin/
-EXE = "${BINDIR}alg"
+BINDIR = .
+EXE = "${BINDIR}/exe"
 
 $(EXE):$(OBJ)
 	$(CROSS)gcc -o $@ $^ ${LDFLAGS}
